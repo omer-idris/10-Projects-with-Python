@@ -1,4 +1,5 @@
-import random, time, os, string, shapes
+import random, time, os, string
+from shapes import bank_note, HANGMANPICS, game_symbols
 
 def clear():
   os.system('cls' if os.name == 'nt' else 'clear')
@@ -46,26 +47,6 @@ generate_invitations()
 
 # 2 ------------------- (Paper, Rock, Scissor Game)
 print('\nPaper, Rock, Scissor\n')
-game_symbols = """
-      _______
-  ---'   ____)
-        (_____)
-        (_____)
-        (____)
-  ---.__(___)
-              ______
-          ---'   ___)_____
-                    ______)
-                __________)
-                (___)
-          ---.__(__)
-       _______
-  ---'    ____)____
-             ______)
-            _______)
-           _______)
-  ---.__________)
-  """
 
 while True:
   clear()
@@ -381,6 +362,7 @@ while True:
     break
     
 print('Black Jack Game ')
+
 
 
 
