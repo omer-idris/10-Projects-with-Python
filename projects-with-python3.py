@@ -272,9 +272,9 @@ print('Welcome to currency converter....')
 def currency_rates():
   print(bank_note)
   print('\n  ==== Our currencies and rates for today ===\n')
-  for cur in sorted(currencies):
-    print(f"    {cur}: {currencies[cur]}")
-  print('  ________________________________')
+  for currency in sorted(currencies):
+    print(f"    {currency}: {currencies[currency]}")
+  print('_'*29)
 
 while True:
   currency_rates()
@@ -323,5 +323,6 @@ while True:
     break
     
 print('Black Jack Game ')
+
 
 
