@@ -363,7 +363,7 @@ while True:
         print(f"Computer's first card is {computer_cards[0]}")
 
         while card == True and sum(user_cards) < 21:
-                if input('Do you another card? yes or no ').lower() == 'yes':
+                if input('Do you want another card? y/n ').lower() == 'y':
                     random_cardfunc1(1)
                     print(f'Your cards are {user_cards}, current score is {sum(user_cards)}')
 
@@ -397,3 +397,4 @@ while True:
             on_game = False
     if input('Do you want to play again? y/n ').lower() != 'y':
         break
+
