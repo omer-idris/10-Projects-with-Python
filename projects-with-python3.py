@@ -1,19 +1,17 @@
-import random
-import time
-import os
-import string
+import random, time, os, string
 
 
 def clear():
   os.system('cls' if os.name == 'nt' else 'clear')
+clear()
 
+# These are ten projects I've made with python throughout my learning journey.
 
-# These are some projects I've made throughout my learning journey with python.
-  # project 1. Paper, Rock, Scissor
-  # project 2. 
-  # project 3.
-  # project 4. 
-  # project 5. 
+  # project 1. Automation
+  # project 2. Paper, Rock, Scissor Game
+  # project 3. Hang Man Game
+  # project 4. Library Catalog
+  # project 5. Currency Converter
   # project 6. Password Generator
   # project 7. Hang Man Game
   # project 8. Library Catalog
@@ -21,8 +19,34 @@ def clear():
   # project 10. Black-Jack Game
 
 
+# 1 ---------------------  (Automation)
+# This is a simplified model of an automation program that allows you to send invitations to as many people as you want with one click.
 
-print('Challenge 1. Paper, Rock, Scissor')
+TEMPLATE_FILE = "D:\Advanced Py\chapter 1\lesson 01\message.txt'"
+RECIPIENTS_FILES = "D:\Advanced Py\chapter 1\lesson 01/names.txt"
+
+def read_template():
+    with open(TEMPLATE_FILE, 'r') as file:
+        return file.read()
+
+def read_names():
+    with open(RECIPIENTS_FILES, 'r') as file:
+        return [i.strip() for i in file.readlines()]
+
+guests = read_names()
+template = read_template()
+
+def generate_invitations():
+    for guest in guests:
+        new_letter = template.replace('name', guest)
+        output_file = f"D:\Advanced Py/chapter 1/lesson 02/letter_for_{guest.lower()}.txt"
+        with open(output_file, 'w') as file:
+            file.write(new_letter)
+
+generate_invitations()
+
+# 2 ------------------- (Paper, Rock, Scissor Game)
+print('\nPaper, Rock, Scissor\n')
 game_symbols = """
       _______
   ---'   ____)
@@ -72,8 +96,8 @@ while True:
   if input('Press any key to continue or type "break" to exit... ').lower() == 'break':
      break
 
-
-print('challenge 11. The Caesar Cipher\nWelcome to the Caesar Cipher.....\n')
+# 3 ------------------- (Caesar Cipher)
+print('\nThe Caesar Cipher\nWelcome to the Caesar Cipher.....\n')
 alphabet = string.ascii_lowercase
 
 def caesar_cipher(to_encrypt, shift_key):
@@ -104,10 +128,9 @@ shift_key = int(input('Enter the shift key: '))
 #    فك التشفير بنفس الدالة ، ضرب المفتاح في سالب واحد لعكس الاتجاه 
 print(caesar_cipher(to_decrypt, shift_key * -1))
 
-input('Press enter to proceed...')
 
-
-print('Challenge #6 Password Generator')
+# 4 ----------------- (Password Generator)
+print('Password Generator')
 while True:
   clear()
   print('Welcome to the Password Generator!\n')
@@ -131,8 +154,8 @@ while True:
      break
 
 
-
-print('Project 7. Hangman project')
+# 5 ------------- (Hangman project)
+print('Hangman project')
 HANGMANPICS = ['''
   +---+
   |   |
@@ -381,9 +404,8 @@ while True:
     print('thank you for using Money Exchanger.')
     time.sleep(3)
     break
+    
+print('Black Jack Game ')
 
-
-
-print('Project #10 Black Jack Game ')
 
 
