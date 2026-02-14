@@ -9,13 +9,13 @@ clear()
 
   # project 1. Automation
   # project 2. Paper, Rock, Scissor Game
-  # project 3. Hang Man Game
-  # project 4. Library Catalog
-  # project 5. Currency Converter
-  # project 6. Password Generator
-  # project 8. Library Catalog
-  # project 9. Currency Converter
-  # project 7. Hang Man Game
+  # project 3.  Caesar Cipher
+  # project 4. Password Generator
+  # project 5. Hang Man Game
+  # project 6. Library Catalog
+  # project 7. Currency Converter
+  # project 8. 
+  # project 9. 
   # project 10. Black-Jack Game
 
 
@@ -182,8 +182,8 @@ while True:
         print('\n------ You loose ------\n')
     if input('Do you want to play again? y/n ').lower() != 'y':
         break
-
-print('Project #8 Library Catalog....')
+# 6 ------------------------ (Library Catalog)
+print('Library Catalog....')
 time.sleep(4)
 library = {}
 
@@ -262,8 +262,8 @@ while True:
   elif entered == '5':
     break
 
- # ----------------- (Currency Converter)
-print('Project #9 Currency Converter')
+ # 7 ----------------- (Currency Converter)
+print('Currency Converter')
 currencies = {'USD': 1.0, 'EUR': 0.85, 'SDP': 598.35, 'SAR': 3.7,
              'GBP': 0.74, 'SHP': 0.32, 'RUB': 80.1, 'EGP': 47.66}
 
@@ -321,8 +321,12 @@ while True:
   if input('Do you want to perform another conversion? y/n: ').lower() != 'y':
     print('thank you for using Money Exchanger.')
     break
-    
+
+# 8 ------------------------ ()
+# 9 ------------------------ ()
+# 10 ----------------------- ()
 print('Black Jack Game ')
+
 
 
 
